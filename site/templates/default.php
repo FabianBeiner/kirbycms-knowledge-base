@@ -1,10 +1,9 @@
 <?php snippet('header') ?>
-
 <div class="content">
-
 	<?php snippet('breadcrumb') ?>
-	<?= kirbytext($page->text()) ?>
+	<?php echo kirbytext($page->text()) ?>
+	<footer>
+		(Updated: <?php echo date('F j, Y \a\t H:i:s', $page->modified()); ?>)
+	</footer>
 </div>
-<div style="clear:both"></div>
-
 <?php snippet('footer') ?>
