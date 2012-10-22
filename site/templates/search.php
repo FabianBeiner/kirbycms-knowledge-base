@@ -9,17 +9,19 @@
 	));
 
 	$results = $search->results();
-      
+
 ?>
 
 <div class="content">
 
 	<?php snippet('breadcrumb') ?>
-	
+
 	<div class="search">
 		<form action="<?= thisURL() ?>">
-	  		<input type="text" placeholder="Search documentation.." name="q" value="<?= html($search->query()) ?>" />
-	  		<input type="submit" value="Search" />
+			<div>
+				<input type="text" placeholder="Search documentation…" name="q" value="<?= html($search->query()) ?>">
+				<input type="submit" value="Search">
+			</div>
 		</form>
 
 		<?php if($results): ?>
@@ -29,8 +31,10 @@
 		<ul>
 		  <?php foreach($results as $row): ?>
 		  <li>
-		    <strong><a href="<?= $row->url() ?>"><?= html($row->title()) ?></a></strong>
-		    <a href="<?= $row->url() ?>"><?= html($row->url()) ?></a>
+			<a href="<?= $row->url() ?>">
+				<strong><?= html($row->title()) ?></strong>
+				<?= html($row->url()) ?></a>
+			</a>
 		  </li>
 		  <?php endforeach ?>
 		</ul>
@@ -44,6 +48,5 @@
 	</div>
 
 </div>
-<div style="clear:both"></div>
 
 <?php snippet('footer') ?>
