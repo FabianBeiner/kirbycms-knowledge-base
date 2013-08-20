@@ -1,4 +1,6 @@
-# Kirby Knowledge Base
+# [UNMAINTAINED] Kirby Knowledge Base
+
+**This repository is unmaintained. Please don't use it.**
 
 Kirby is a simple file-based cms, made by <https://twitter.com/bastianallgeier>. At <http://www.6wunderkinder.com> we're using it as an internal knowledge-base for any type of documentation (processes, products, API...). It took us a long time to find the best setup for this and because we think most companies are struggling with this, we decided to open-source it.
 
